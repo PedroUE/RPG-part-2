@@ -95,9 +95,9 @@ console.log("Só que ele chega em sua primeira escolha, uma encruzilhada com uma
 console.log("----------------------------------------------------------");
 
 if (nivelMantoVPN >= 5) {
-    console.log(nome, "passou sem ser percebido.");
+    console.log("RESPOSTA:",nome, "passou sem ser percebido.");
 } else {
-    console.log("melhore seu manto ou você morrera.");
+    console.log("RESPOSTA: melhore seu manto ou você morrera.");
 }
 console.log("----------------------------------------------------------");
 console.log(nome, "Passa sem ser percebido, mas acaba tropeçando e cando de cara no chão, perdendo 10 de vida.");
@@ -116,11 +116,13 @@ console.log(nome, "então olha para seu bolso e vê que não tinha dinheiro o su
 console.log("----------------------------------------------------------")
 
 if (ouro >= 200) {
-    console.log("Parabéns, você adquiriu a chave universal.");
+    console.log("RESPOSTA: Parabéns, você adquiriu a chave universal.");
 } else if (xp >= 1000) {
-    console.log("Parabéns, você adquiriu a chave universal");
+    console.log("RESPOSTA: Parabéns, você adquiriu a chave universal");
 } else {
-    console.log("Desculpa andarilho, mas você não tem ouro e nem mana.");
+    console.log("RESPOSTA: Desculpa andarilho, mas você não tem ouro e nem mana.");
 }
 
-console.log("----------------------------------------------------------")
+console.log("----------------------------------------------------------");
+console.log(nome, "Sai da loja clandestina e segue seu caminho rumo ao reino.");
+console.log("----------------------------------------------------------");
