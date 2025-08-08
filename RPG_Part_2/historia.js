@@ -8,10 +8,11 @@ let nivel = 14;
 let vida = 100;
 let ouro = 190;
 let xp = 50;
-let manaMaxima = 70;
-let manaAtual = 50;
 let nivelMantoVPN = 10;
-
+let escalada = 40;
+let iluminacaoHobbit = 12;
+let vidaVilao = 200
+let mana = 200;
 
 //2. 🔸 DEFINIÇÃO DE CONSTANTES MÁGICAS
 const NOMEARMA = "Espada de Hobbit";
@@ -91,14 +92,12 @@ console.log("⚔️ Capítulo 1 - Primeira Decisão");
 console.log("------------------------------------------------------------------------------------------");
 console.log("Ao viajar para net,", nome,"sabia que o caminho não era fácil e que háveria muitos obstáculos perigosos no caminho.");
 console.log("Então ele decide viajar pelas estradas pois o caminho seria mais curto, mas por controversas háveria muito mais perigos.");
-console.log("Só que ele chega em sua primeira escolha, uma encruzilhada com uma placa que dizia: Cuidado! fishings há frente, Apenas MantosVPN nivel 5 passaram.");
+console.log("Só que ele chega em sua primeira escolha, uma encruzilhada com uma placa que dizia: Cuidado! fishings há frente, Apenas MantosVPN passaram.");
 console.log("----------------------------------------------------------");
 
-if (nivelMantoVPN >= 5) {
+if (nivelMantoVPN) {
     console.log("RESPOSTA:",nome, "passou sem ser percebido.");
-} else {
-    console.log("RESPOSTA: melhore seu manto ou você morrera.");
-}
+} 
 console.log("----------------------------------------------------------");
 console.log(nome, "Passa sem ser percebido, mas acaba tropeçando e cando de cara no chão, perdendo 10 de vida.");
 console.log("----------------------------------------------------------")
@@ -111,18 +110,73 @@ console.log("----------------------------------------------------------")
 console.log("Ao passar pela estrada,", nome, "chega a uma loja clandetina na beira da estrada.");
 console.log("E ao entrar, ele se depara com um elfo baixo e ranzinza que olha para", nome, "e diz:");
 console.log("bem-vindo andarilho, sei que está indo atrás de", nomeVilao, "e tenho a chave universal, ela é capaz de abrir qualquer porta de toda terra de net.");
-console.log("A chave custa 200 de ouro, mas também posso vendela por 1000 de mana.");
+console.log("A chave custa 200 de ouro.");
 console.log(nome, "então olha para seu bolso e vê que não tinha dinheiro o suficiente.")
 console.log("----------------------------------------------------------")
 
 if (ouro >= 200) {
     console.log("RESPOSTA: Parabéns, você adquiriu a chave universal.");
-} else if (xp >= 1000) {
-    console.log("RESPOSTA: Parabéns, você adquiriu a chave universal");
 } else {
-    console.log("RESPOSTA: Desculpa andarilho, mas você não tem ouro e nem mana.");
+    console.log("RESPOSTA: Desculpa andarilho, mas você não tem ouro.");
 }
 
 console.log("----------------------------------------------------------");
-console.log(nome, "Sai da loja clandestina e segue seu caminho rumo ao reino.");
+console.log(nome, "Sai da loja clandestina e segue seu caminho rumo ao castelo.");
 console.log("----------------------------------------------------------");
+
+//🎭 Capítulo 3
+
+console.log("🎭 Capítulo 3 - o castelo")
+console.log("----------------------------------------------------------");
+console.log(nome, "finalmente chega ao castelo de", nomeVilao, "e se depara com uma porta gigante.");
+console.log("Mas ao se lembrar da chave,", nome, "entra em sedespero pois não conseguia passar pela porta.");
+console.log("Porem ao olhar para cima, ele vê uma janela entreaberta e uma fresta ao lado da porta.");
+console.log("Então", nome, "precisa tomar uma decisão");
+console.log("----------------------------------------------------------");
+
+if (escalada >= 30) {
+    console.log(nome, "escala a janela e entra na sala de seu arque inimigo.");
+} else if(iluminacaoHobbit >= 20) {
+    console.log(nome, "cai em um buraco e acaba ficando preso para sempre.");
+} else {
+   console.log(nome, "não conseque nenhuma das opções, volte quando estiver em um nível maior.");
+}
+
+console.log("----------------------------------------------------------");
+console.log("ao entrar", nome, "foi pego de surpresa e tomou um golpe na cabeça e perdeu 30 de vida.");
+
+//tomou golpe na cabeça;
+vida -= 30;
+
+console.log("ao puxar sua espada ele acerta seu inimigo em cheio");
+
+//Frodo tira vida de baidu;
+
+vidaVilao -= DANOBASE;
+
+console.log("deixando assim ele com", vidaVilao, "de vida.");
+
+//Baidu tira vida de frodo;
+vida -= 20;
+
+console.log("Então", nomeVilao, "usa seu feitiço de absorção de vida, assim deixando",nome, "com", vida, "de vida." );
+console.log("Mas se", nome, "Estiver no nivel", nivel, "será possivel ultilizar o código mágico de ", TECLADOENCANTADO, "que matará baidu para sempre." );
+console.log("ou então ele precisara estar com 1000 de mana para finalizalo com sua", NOMEARMA, "assim perderdo muita força.");
+console.log("----------------------------------------------------------");
+
+if (nivel >= 14) {
+    console.log("Resposta:", nome, "ultiliza o código magico, assim matando", nomeVilao, "para sempre.");
+} else if (mana >= 1000) {
+    console.log(nome, "pula em cima da cabeça de", nomeVilao, "e o apunhala matando para sempre, mas perdendo toda sua força.");
+} else {
+    console.log(nome, "acaba sendo surpreendido e tomando o golpe final de seu inimigo, assim morrendo.");
+}
+
+//aumentou seu nivel pois derrotou seu inimigo.
+
+nivel += 20;
+
+console.log("🏆 Epílogo:");
+console.log("---------------------------------------------------------");
+console.log(nome, "se depara com uma escotilha no chão de seu inimigo, e por curiosidade acaba vendo o que tinha lá dentro.");
+console.log("mas um portal se abre e acaba sugando", nome, "para dentro, assim levando-o para outra dimensão.");
