@@ -20,6 +20,7 @@ const DANOBASE = 55;
 const ARMADURA = "Armadura Elfica";
 const DEFESA = 25;
 const TECLADOENCANTADO = "qwerty o impiedoso";
+const ARROMBAMENTO = "Gazua encantada"
 
 //3. ⚙️ APLICAÇÃO DE OPERADORES DE ATRIBUIÇÃO.
 
@@ -101,8 +102,23 @@ if (nivelMantoVPN) {
 console.log("----------------------------------------------------------");
 console.log(nome, "Passa sem ser percebido, mas acaba tropeçando e cando de cara no chão, perdendo 10 de vida.");
 console.log("----------------------------------------------------------")
-vida -= 10
 
+//caiu de cara e perdeu vida.
+vida -= 10;
+
+console.log(nome, "precisou descansar, assim ganhando 10 de mana");
+
+//mana recuperada
+mana += 10;
+
+console.log(nome, "encontrou uma pedra de encantamento mágico, mas era necessário nivel 5 para usa-la");
+
+if (nivel >= 5) {
+    console.log("ganhou nível");
+
+    //aumento de nivel
+    nivel += 2
+}
 //🛡️ Capítulo 2 - Escolha Estratégica
 
 console.log("🛡️ Capítulo 2 - Escolha Estratégica");
@@ -120,10 +136,30 @@ if (ouro >= 200) {
     console.log("RESPOSTA: Desculpa andarilho, mas você não tem ouro.");
 }
 
+
+
+
 console.log("----------------------------------------------------------");
 console.log(nome, "Sai da loja clandestina e segue seu caminho rumo ao castelo.");
 console.log("----------------------------------------------------------");
 
+console.log(nome, "encontra um ninho de águia com moedas");
+if (ataqueForte === true) {
+    console.log("você destruiu o ninho e ganhou 5 moedas");
+}    
+    ouro += 5;
+
+console.log("----------------------------------------------------------");
+console.log(nome, "Encontra um livro de feitiços e decide arrombar o cadeado para ganhar xp");
+console.log("----------------------------------------------------------");
+
+if (ARROMBAMENTO === true) {
+    console.log ("Você leu o livro e ganhou a habilidade de esquiva.")
+}
+//Ganhou esquiva
+let esquiva = 1;
+
+console.log("----------------------------------------------------------");
 //🎭 Capítulo 3
 
 console.log("🎭 Capítulo 3 - o castelo")
