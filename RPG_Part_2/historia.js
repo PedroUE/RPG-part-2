@@ -291,4 +291,4 @@ if (i === 0) {
 }
 }
 
-console.log("📊 Exploração completa")
+console.log("📊 Exploração completa! Vida:", vida, " dano total:", danoTotal);
