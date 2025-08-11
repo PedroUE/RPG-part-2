@@ -216,3 +216,59 @@ console.log("🏆 Epílogo:");
 console.log("---------------------------------------------------------");
 console.log(nome, "se depara com uma escotilha no chão de seu inimigo, e por curiosidade acaba vendo o que tinha lá dentro.");
 console.log("mas um portal se abre e acaba sugando", nome, "para dentro, assim levando-o para outra dimensão.");
+console.log("---------------------------------------------------------");
+
+
+//NIVEL 3
+
+// === CONTINUAÇÃO DA SAGA ÉPICA - NÍVEL 3 ===
+
+//Ao entrar em uma nova dimensão você ganha 15 de mana e 200 de xp subindo de nivel
+
+mana += 15;
+xp += 200;
+nivel += 1;
+
+// === NOVOS ELEMENTOS PARA O NOVO MUNDO ===
+
+let inventario = ["Espada de Hobbit", "Poção de mana", "Gazua encantada", "qwerty o impiedoso", "runa de invocação", "poção de vida 2x"];
+let aliados = ["rafinha o barbaro", "mago jão"];
+let inimigos = ["Fisinhgs", "Schrödinbug Fantasma", "Mandelbug"];
+let tesouros = [];
+
+// === CAPÍTULO 1: Um novo mundo ===
+console.log("");
+console.log("🗺 CAPÍTULO 1: Um novo mundo");
+
+//Menu de itens chaves 
+
+let itensChave = ["capa de baidu", "pedra mágica"];
+
+console.log(nome, "usa poção de cura e recupera 20 de vida",);
+vida += 20;
+//poção usada
+let itemRemovido = inventario.pop();
+console.log("🎒 Inventario atual:", inventario);
+console.log("------------------------------------------------------");
+
+console.log("agora em um novo mundo", nome, "se sente fragíl, assim convocan seus amigos para ajudalo.");
+//usa a runa de invocação;
+let runaUsada = inventario.pop();
+console.log ("🎒 Inventario atual:", inventario);
+console.log("------------------------------------------------------");
+
+//descarta a pedra, pois não terá mais uso
+
+let descarteDeItensChaves = itensChave.pop();
+console.log("🎒 Inventario de itens chaves atual:", itensChave);
+console.log("------------------------------------------------------");
+
+//encontra um livro de encantamento
+inventario.push("livro encantado");
+console.log("📖 livro adicionado ao inventário:", inventario);
+
+
+// === CAPÍTULO 2: amigos e desafios pelo caminho ===
+console.log("");
+console.log("⚔️ CAPÍTULO 2: amigos e desafios pelo caminho");
+
