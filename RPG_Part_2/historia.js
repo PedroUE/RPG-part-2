@@ -235,6 +235,7 @@ let inventario = ["Espada de Hobbit", "Poção de mana", "Gazua encantada", "qwe
 let aliados = ["rafinha o barbaro", "mago jão"];
 let inimigos = ["Fisinhgs", "Schrödinbug Fantasma", "Mandelbug"];
 let tesouros = [];
+let salasMina = ["Torre de carvão", "sala do equipamento", "sala de mineração"];
 
 // === CAPÍTULO 1: Um novo mundo ===
 console.log("");
@@ -242,7 +243,7 @@ console.log("🗺 CAPÍTULO 1: Um novo mundo");
 
 //Menu de itens chaves 
 
-let itensChave = ["capa de baidu", "pedra mágica"];
+let itensChave = ["chave de baidu", "pedra mágica"];
 
 console.log(nome, "usa poção de cura e recupera 20 de vida",);
 vida += 20;
@@ -268,7 +269,26 @@ inventario.push("livro encantado");
 console.log("📖 livro adicionado ao inventário:", inventario);
 
 
-// === CAPÍTULO 2: amigos e desafios pelo caminho ===
+// === CAPÍTULO 2: as minas dos anões ===
 console.log("");
-console.log("⚔️ CAPÍTULO 2: amigos e desafios pelo caminho");
+console.log("⚔️ CAPÍTULO 2: as minas dos anões");
 
+//Começo da exploração pelas minas
+
+console.log("⛏️ começando a busca pela saida desse mundo");
+
+for (let i = 0; i < salasMina.length; i++) {
+console.log("sala", (i + 1), ":", salasMina.length[i]);
+
+if (i === 0) {
+    console.log(nome,"caiu em uma armadilha de pedras");
+    vida -= 20;
+} else if (i === 1) {
+    console.log("🧨", nome, "encontrou uma barra de dinâmite")
+} else {
+    console.log("📚", nome, "encontra um livro de magia que duplica o dano total de sua arma");
+    danoTotal *= 2
+}
+}
+
+console.log("📊 Exploração completa")
